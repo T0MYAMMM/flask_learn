@@ -5,7 +5,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-df = pd.DataFrame('rumahsakit_medicalclinicid.csv')
+df = pd.DataFrame('rumahsakit_medicalclinicid_cleaned.csv')
 
 @app.route('/')
 def index():
