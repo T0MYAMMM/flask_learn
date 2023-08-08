@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Learn</title>
+    <title>Rumah Sakit Search Engine</title>
 </head>
 <body>
-    <h1>HELLO WORLD</h1>
+    <div class="container">
+        <h1 class="my-4">Rumah Sakit Search Engine</h1>
+        <form id="search-form" class="form-inline">
+            <input
+                type="text"
+                name="query"
+                placeholder="Search..."
+                class="form-control mr-2"
+            />  
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <br/>
+    <p id="processing-times"></p>
+    <br/>
+    <table class="table table-striped">
+        <thead id="results-header">
+            <tr>
+                <th>Nama</th>
+                <th>Jenis</th>
+                <th>Alamat</th>
+                <th>URL</th>
+            </tr>
+            
+        </thead>
+        <tbody id="results-table">
+            {% for row in results[:] %}
+                <tr>
+                    <td>{{ row['Nama Rumah Sakit'] | safe }}</td>
+                    <td>{{ row['Jenis Rumah Sakit'] | safe }}</td>
+                    <td>{{ row['Alamat'] | safe }}</td>
+                    <td><a href=f"{URL}"> {{ row['URL'] | safe }} </a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
