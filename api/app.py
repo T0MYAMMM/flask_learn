@@ -14,6 +14,6 @@ df = pd.DataFrame(data)
 
 @app.route('/')
 def index():
-    results_df = data.to_dict(orient='records')
+    results_df = df.to_dict(orient='records')
     return render_template('index.html', results=results_df)
 
