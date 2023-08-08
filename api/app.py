@@ -1,9 +1,11 @@
-import pandas as pd
+#import pandas as pd
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
-data = pd.read_csv('rumahsakit_medicalclinicid_cleaned.csv')
+data = {'Nama Rumah Sakit' : ['RS A', 'RS B', 'RS C'], 
+        'Jenis Rumah Sakit': ['RS',  'RSIA', 'RSJ'],
+        'Alamat': ['Jalan-jalan', 'Jalan kayang','Jalangkote']}
 
 @app.route('/')
 def home_dashboard():

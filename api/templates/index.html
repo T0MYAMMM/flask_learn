@@ -24,7 +24,6 @@
                 <th>Nama</th>
                 <th>Jenis</th>
                 <th>Alamat</th>
-                <th>URL</th>
             </tr>
             
         </thead>
@@ -34,7 +33,6 @@
                     <td>{{ row['Nama Rumah Sakit'] | safe }}</td>
                     <td>{{ row['Jenis Rumah Sakit'] | safe }}</td>
                     <td>{{ row['Alamat'] | safe }}</td>
-                    <td><a href=f"{URL}"> {{ row['URL'] | safe }} </a></td>
                 </tr>
             {% endfor %}
         </tbody>
