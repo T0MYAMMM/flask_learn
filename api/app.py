@@ -5,11 +5,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-data = {'Nama Rumah Sakit' : ['RS A', 'RS B', 'RS C'], 
-        'Jenis Rumah Sakit': ['RS',  'RSIA', 'RSJ'],
-        'Alamat': ['Jalan-jalan', 'Jalan kayang','Jalangkote']}
-
-df = pd.DataFrame(data)
+df = pd.DataFrame('rumahsakit_medicalclinicid.csv')
 
 @app.route('/')
 def index():
