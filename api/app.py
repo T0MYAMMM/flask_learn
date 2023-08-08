@@ -10,7 +10,7 @@ data = {'Nama Rumah Sakit' : ['RS A', 'RS B', 'RS C'],
         'Alamat': ['Jalan-jalan', 'Jalan kayang','Jalangkote']}
 
 df = pd.DataFrame(data)
-#df = pd.read_csv('rumahsakit_medicalclinicid_cleaned.csv')
+df = pd.read_csv('rumahsakit_medicalclinicid_cleaned.csv')
 
 @app.route('/')
 def index():
