@@ -14,6 +14,6 @@ df = pd.read_csv('rumahsakit_medicalclinicid_cleaned.csv')
 
 @app.route('/')
 def index():
-    results_df = df.to_dict(orient='records')
+    results_df = df
     return render_template('index.html', results=results_df)
 
