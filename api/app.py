@@ -8,7 +8,7 @@ data = {'Nama Rumah Sakit' : ['RS A', 'RS B', 'RS C'],
         'Alamat': ['Jalan-jalan', 'Jalan kayang','Jalangkote']}
 
 @app.route('/')
-def home_dashboard():
+def index():
     results_df = data.to_dict(orient='records')
     return render_template('index.html', results=results_df)
 
